@@ -6,8 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-guide';
+  
   menuOptions: Array<Object> = [{
+    url: '/home',
+    label: '/home'
+  }, {
     url: '/architecture',
     label: 'architecture'
   }, {
