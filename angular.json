@@ -10,7 +10,7 @@
       "prefix": "anguide",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "sass"
+          "styleext": "scss"
         }
       },
       "architect": {
