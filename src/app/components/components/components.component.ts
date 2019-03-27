@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'anguide-components',
   templateUrl: './components.component.html',
-  styleUrls: ['./components.component.sass']
+  styleUrls: ['./components.component.scss']
 })
 export class ComponentsComponent implements OnInit {
 
