@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+$light-blue: rgb(82, 137, 219);
+
 body {
   font-family: 'Quicksand', sans-serif;
+}
+
+.anguide-section {
+  padding: 24px;
+}
+
+.anguide-italic-font {
+  font-style: italic;
+  color: $light-blue;
+}
+
+.anguide-code-container {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: black;
 }

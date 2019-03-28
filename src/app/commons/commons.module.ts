@@ -3,15 +3,20 @@ import { RouterModule } from '@angular/router'
 import { CommonModule } from '@angular/common'
 ;
 import { MenuComponent } from './menu/menu.component';
+import { FirstChildComponent } from './first-child/first-child.component';
 
 @NgModule({
-  declarations: [MenuComponent],
+  declarations: [
+    MenuComponent,
+    FirstChildComponent
+  ],
   imports: [
     CommonModule,
     RouterModule
   ],
   exports: [
-    MenuComponent
+    MenuComponent,
+    FirstChildComponent
   ]
 })
 export class CommonsModule { }

@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { ComponentsRoutingModule } from './components-routing.module';
 import { ComponentsComponent } from './components/components.component';
+import { StyleSelectorsComponent } from './style-selectors/style-selectors.component';
+import { CommonsModule } from '../commons/commons.module';
 
 @NgModule({
-  declarations: [ComponentsComponent],
+  declarations: [ComponentsComponent, StyleSelectorsComponent],
   imports: [
     CommonModule,
+    CommonsModule,
     ComponentsRoutingModule
   ]
 })

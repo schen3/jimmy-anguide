@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  border: 1px solid red;
+}
+
+:host-context(.anguide-topic) li {
+  font-style: italic;
+}
+
+::ng-deep anguide-first-child > span {
+  color: red;
+  text-transform: uppercase;
+}
+
+ul li span {
+  color: black;
+}

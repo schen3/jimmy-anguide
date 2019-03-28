@@ -1,0 +1,52 @@
+<p>
+  Lets apply styles to this component <span class="anguide-italic-font">{{ '<' }}anguide-style-selectors></span>
+</p>
+<ul>
+  <li>:host</li>
+  <li>:host-context</li>
+  <li>
+    <anguide-first-child><span>>>> and ::ng-deep</span></anguide-first-child>
+  </li>
+</ul>
+
+<div class="anguide-code-container">
+  <pre class="prettyprint linenums lang-html">
+{{ '<' }}div class="anguide-topic">
+  ...
+  {{ '<' }}anguide-style-selectors>
+    Lets apply styles to this component {{ '<' }}anguide-style-selectors>
+    {{ '<' }}ul>
+      {{ '<' }}li>:host{{ '<' }}/li>
+      {{ '<' }}li>:host-context{{ '<' }}/li>
+      {{ '<' }}li>
+        {{ '<' }}anguide-first-child>{{ '<' }}span>>>> and ::ng-deep{{ '<' }}/span>{{ '<' }}/anguide-first-child>
+      {{ '<' }}/li>
+    {{ '<' }}/ul>
+  {{ '<' }}/anguide-style-selectors>
+{{ '<' }}/div>
+  </pre>
+</div>
+
+<p>And now the style selctors are:</p>
+
+<div class="anguide-code-container">
+  <pre class="prettyprint linenums lang-html">
+:host {{ '{' }}
+  display: block;
+  border: 1px solid red;
+}
+
+:host-context(.anguide-topic) li {{ '{' }}
+  font-style: italic;
+}
+
+::ng-deep anguide-first-child > span {{ '{' }}
+  color: red;
+  text-transform: uppercase;
+}
+
+ul li span {{ '{' }}
+  color: black;
+}
+  </pre>
+</div>

@@ -14,4 +14,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngAfterViewChecked(){
+    setTimeout(() => {
+      //window['PR'].prettyPrint();
+    })
+  }
 }
