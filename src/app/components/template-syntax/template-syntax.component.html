@@ -1,0 +1,159 @@
+<div class="anguide-topic">
+  <h2>Template Syntax</h2>
+
+  <p class="anguide-question">
+    How is the script tag treated in and HTML template?
+  </p>
+  <p class="anguide-answer">
+    SCRIPT tags are simply ignored to prevent safety risks of encripting scripts
+  </p>
+
+  <p class="anguide-question">
+    How are different the HTML attributes than the DOM properties?
+  </p>
+  <p class="anguide-answer">
+    Attributes are defined by HTML. Properties are defined by the DOM 
+    (Document Object Model).
+  </p>
+  <p class="anguide-answer">
+    Attributes initialize DOM properties and then they are done. Property 
+    values can change; attribute values can't.
+  </p>
+  <p class="anguide-answer">
+    The HTML attribute and the DOM property are not the same thing, even when 
+    they have the same name.
+  </p>
+  <p class="anguide-answer">
+    <b>Template binding works with properties and events, not attributes.</b>
+    <span> In the world of Angular, the only role of attributes is to 
+      initialize element and directive state. When you write a data binding, 
+      you're dealing exclusively with properties and events of the target 
+      object. HTML attributes effectively disappear.</span>
+  </p>
+
+  <p class="anguide-question">
+    What is ONE-WAY binding?
+  </p>
+  <p class="anguide-answer">
+    It means that you cannot use property binding to pull values out of the 
+    target element. You can't bind to a property of the target element to read 
+    it. You can only set it.
+  </p>
+
+  <p class="anguide-question">
+    Are property binding and interpolation the same?
+  </p>
+  <p class="anguide-answer">
+    Interpolation uses double curly braces to delimit expressions into HTML. 
+    Property binding evaluates an expressions and passes the value to the 
+    component property.
+  </p>
+  <p class="anguide-answer">
+    When binding data values as strings both can be used exactly for the same. 
+    The implementation though is defferent:
+  </p>
+  <div class="anguide-code-container">
+    <pre class="prettyprint linenums lang-html">
+{{'<'}}p>{{'<'}}img src="{{ '{{' }}heroImageUrl}}"> is the {{'<'}}i>interpolated{{'<'}}/i> image.{{'<'}}/p>
+{{'<'}}p>{{'<'}}img [src]="heroImageUrl"> is the {{'<'}}i>property bound{{'<'}}/i> image.{{'<'}}/p>
+
+{{'<'}}p>{{'<'}}span>"{{ '{{' }}title}}" is the {{'<'}}i>interpolated{{'<'}}/i> title.{{'<'}}/span>{{'<'}}/p>
+{{'<'}}p>"{{'<'}}span [innerHTML]="title">{{'<'}}/span>" is the {{'<'}}i>property bound{{'<'}}/i> title.{{'<'}}/p> 
+    </pre>
+  </div>
+
+  <p class="anguide-question">
+    When do we use <b>Attribute Binding</b>?
+  </p>
+  <p class="anguide-answer">
+    This is used to set a value to an attribute directly. This is the only 
+    exception for targeting a property of the element. 
+    <b>We must use attribute binding when there is no property to bind.</b>
+  </p>
+  <p class="anguide-answer">
+    The use of attribute binding is needed to cases like ARIA, colspan, svg 
+    for example since they are pure attributes.
+  </p>
+  <div class="anguide-code-container">
+    <pre class="prettyprint linenums lang-html">
+{{'<'}}button [attr.aria-label]="actionName">{{actionName}} with Aria{{'<'}}/button>
+{{'<'}}tr>{{'<'}}td [attr.colspan]="1 + 1">One-Two{{'<'}}/td>{{'<'}}/tr>
+    </pre>
+  </div>
+
+  <p class="anguide-question">
+    When do we use <b>Class Binding</b> and when ngClass?
+  </p>
+  <p class="anguide-answer">
+    When adding or removing classes from the class attribute. Class binding 
+    allows you to bind all-or-nothing class names as well as single classes. 
+    NgClass directive is used when multiple class names have to be managed at 
+    the same time.
+  </p>
+  <div class="anguide-code-container">
+    <pre class="prettyprint linenums lang-html">
+{{'<'}}!-- reset/override all class names with a binding  -->
+{{'<'}}div class="bad curly special" [class]="badCurly">Bad curly{{'<'}}/div>
+{{'<'}}!-- toggle the "special" class on/off with a property -->
+{{'<'}}div [class.special]="isSpecial">The class binding is special{{'<'}}/div>
+    </pre>
+  </div>
+
+  <p class="anguide-question">
+    When do we use <b>Style Binding</b> and when ngStyle?
+  </p>
+  <p class="anguide-answer">
+    To set inline styles we can use style binding. This is fine for single 
+    styles but the directive NgStyle is preferred when several inline styles 
+    are to be set.
+  </p>
+  <div class="anguide-code-container">
+    <pre class="prettyprint linenums lang-html">
+{{'<'}}!-- The style property cna be written with dash separator or camelCase notation  -->
+{{'<'}}button [style.color]="isSpecial ? 'red': 'green'">Red{{'<'}}/button>
+{{'<'}}button [style.background-color]="canSave ? 'cyan': 'grey'" >Save{{'<'}}/button>
+{{'<'}}button [style.backgroundColor]="canSave ? 'cyan': 'grey'" >Save{{'<'}}/button>
+    </pre>
+  </div>
+
+  <p class="anguide-question">
+    Why is it said that "The two-way binding syntax is really just syntactic 
+    sugar for a property binding and an event binding"?
+  </p>
+  <p class="anguide-answer">
+    Angular "desugars" 2 way binding to property and event binding.
+  </p>
+  <div class="anguide-code-container">
+    <pre class="prettyprint linenums lang-html">
+{{'<'}}!-- Angular assigns the $event value to the fontSizePx variable.  -->
+{{'<'}}app-sizer [(size)]="fontSizePx">{{'<'}}/app-sizer>
+{{'<'}}app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event">{{'<'}}/app-sizer>
+    </pre>
+  </div>
+
+  <p class="anguide-question">
+    Are NgClass, NgModel, NgStyle attribute directives or structural directives?
+  </p>
+  <p class="anguide-answer">
+    They are examples of attribute directives. Attribute directives are meant to 
+    modify the behavior of HTML elements, attributes, properties or components.
+  </p>
+  <div>
+    <ul>
+      <li>NgClass - add and remove a set of CSS classes</li>
+      <li>NgStyle - add and remove a set of HTML styles</li>
+      <li>NgModel - two-way data binding to an HTML form element</li>
+    </ul>
+  </div>
+
+  <p class="anguide-question">
+    What is Content Projection?
+  </p>
+  <p class="anguide-answer">
+    Known in AngularJS as transclusion it allows configurable content to be displayed
+    in specific parts of a component. It uses the directive ng-content.
+    There are several ways to implement content projection in Angular: by class, 
+    by selector. The component anguide-question in this guide is an example of 
+    content projection.
+  </p>
+</div>
