@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common'
 ;
 import { MenuComponent } from './menu/menu.component';
 import { FirstChildComponent } from './first-child/first-child.component';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   declarations: [
     MenuComponent,
-    FirstChildComponent
+    FirstChildComponent,
+    QuestionComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { FirstChildComponent } from './first-child/first-child.component';
   ],
   exports: [
     MenuComponent,
-    FirstChildComponent
+    FirstChildComponent,
+    QuestionComponent
   ]
 })
 export class CommonsModule { }
