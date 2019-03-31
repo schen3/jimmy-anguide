@@ -9,9 +9,17 @@ body {
   padding: 24px;
 }
 
-.anguide-italic-font {
+%italic-blue-font {
   font-style: italic;
   color: $light-blue;
+}
+
+.anguide-italic-font {
+  @extend %italic-blue-font;
+}
+
+.anguide-answer {
+  @extend %italic-blue-font;
 }
 
 .anguide-code-container {
@@ -21,3 +29,4 @@ body {
   border-radius: 8px;
   background-color: black;
 }
+
