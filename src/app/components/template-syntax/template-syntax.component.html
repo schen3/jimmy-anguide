@@ -1,159 +1,258 @@
 <div class="anguide-topic">
   <h2>Template Syntax</h2>
 
-  <p class="anguide-question">
-    How is the script tag treated in and HTML template?
-  </p>
-  <p class="anguide-answer">
-    SCRIPT tags are simply ignored to prevent safety risks of encripting scripts
-  </p>
+  <anguide-question>
+    <div class="question">
+      How is the script tag treated in and HTML template?
+    </div>
+    <div class="answer">
+      SCRIPT tags are simply ignored to prevent safety risks of encripting scripts
+    </div>
+  </anguide-question>
 
-  <p class="anguide-question">
-    How are different the HTML attributes than the DOM properties?
-  </p>
-  <p class="anguide-answer">
-    Attributes are defined by HTML. Properties are defined by the DOM 
-    (Document Object Model).
-  </p>
-  <p class="anguide-answer">
-    Attributes initialize DOM properties and then they are done. Property 
-    values can change; attribute values can't.
-  </p>
-  <p class="anguide-answer">
-    The HTML attribute and the DOM property are not the same thing, even when 
-    they have the same name.
-  </p>
-  <p class="anguide-answer">
-    <b>Template binding works with properties and events, not attributes.</b>
-    <span> In the world of Angular, the only role of attributes is to 
-      initialize element and directive state. When you write a data binding, 
-      you're dealing exclusively with properties and events of the target 
-      object. HTML attributes effectively disappear.</span>
-  </p>
+  <anguide-question>
+    <div class="question">
+      How are different the HTML attributes than the DOM properties?
+    </div>
+    <div class="answer">
+      <ul>
+        <li>
+          Attributes are defined by HTML. Properties are defined by the DOM 
+          (Document Object Model).
+        </li>
+        <li>
+          Attributes initialize DOM properties and then they are done. Property 
+          values can change; attribute values can't.
+        </li>
+        <li>
+          The HTML attribute and the DOM property are not the same thing, even when 
+          they have the same name.
+        </li>
+        <li>
+          <b>Template binding works with properties and events, not attributes.</b>
+          <span> In the world of Angular, the only role of attributes is to 
+            initialize element and directive state. When you write a data binding, 
+            you're dealing exclusively with properties and events of the target 
+            object. HTML attributes effectively disappear.</span>
+        </li>
+      </ul> 
+    </div>
+  </anguide-question>
 
-  <p class="anguide-question">
-    What is ONE-WAY binding?
-  </p>
-  <p class="anguide-answer">
-    It means that you cannot use property binding to pull values out of the 
-    target element. You can't bind to a property of the target element to read 
-    it. You can only set it.
-  </p>
+  <anguide-question>
+    <div class="question">
+      What is ONE-WAY binding?
+    </div>
+    <div class="answer">
+      It means that you cannot use property binding to pull values out of the 
+      target element. You can't bind to a property of the target element to read 
+      it. You can only set it.
+    </div>
+  </anguide-question>
 
-  <p class="anguide-question">
-    Are property binding and interpolation the same?
-  </p>
-  <p class="anguide-answer">
-    Interpolation uses double curly braces to delimit expressions into HTML. 
-    Property binding evaluates an expressions and passes the value to the 
-    component property.
-  </p>
-  <p class="anguide-answer">
-    When binding data values as strings both can be used exactly for the same. 
-    The implementation though is defferent:
-  </p>
-  <div class="anguide-code-container">
-    <pre class="prettyprint linenums lang-html">
+  <anguide-question>
+    <div class="question">
+      Are property binding and interpolation the same?
+    </div>
+    <div class="answer">
+      Interpolation uses double curly braces to delimit expressions into HTML. 
+      Property binding evaluates an expressions and passes the value to the 
+      component property.
+      When binding data values as strings both can be used exactly for the same. 
+        The implementation though is defferent:
+      <div class="anguide-code-container">
+        <pre class="prettyprint linenums lang-html">
 {{'<'}}p>{{'<'}}img src="{{ '{{' }}heroImageUrl}}"> is the {{'<'}}i>interpolated{{'<'}}/i> image.{{'<'}}/p>
 {{'<'}}p>{{'<'}}img [src]="heroImageUrl"> is the {{'<'}}i>property bound{{'<'}}/i> image.{{'<'}}/p>
 
 {{'<'}}p>{{'<'}}span>"{{ '{{' }}title}}" is the {{'<'}}i>interpolated{{'<'}}/i> title.{{'<'}}/span>{{'<'}}/p>
 {{'<'}}p>"{{'<'}}span [innerHTML]="title">{{'<'}}/span>" is the {{'<'}}i>property bound{{'<'}}/i> title.{{'<'}}/p> 
-    </pre>
-  </div>
+        </pre>
+        </div>
+    </div>
+  </anguide-question>
 
-  <p class="anguide-question">
-    When do we use <b>Attribute Binding</b>?
-  </p>
-  <p class="anguide-answer">
-    This is used to set a value to an attribute directly. This is the only 
-    exception for targeting a property of the element. 
-    <b>We must use attribute binding when there is no property to bind.</b>
-  </p>
-  <p class="anguide-answer">
-    The use of attribute binding is needed to cases like ARIA, colspan, svg 
-    for example since they are pure attributes.
-  </p>
-  <div class="anguide-code-container">
-    <pre class="prettyprint linenums lang-html">
+  <anguide-question>
+    <div class="question">
+      When do we use <b>Attribute Binding</b>?
+    </div>
+    <div class="answer">
+      This is used to set a value to an attribute directly. This is the only 
+      exception for targeting a property of the element. 
+      <b>We must use attribute binding when there is no property to bind.</b>
+      The use of attribute binding is needed to cases like ARIA, colspan, svg 
+      for example since they are pure attributes.
+      <div class="anguide-code-container">
+        <pre class="prettyprint linenums lang-html">
 {{'<'}}button [attr.aria-label]="actionName">{{actionName}} with Aria{{'<'}}/button>
 {{'<'}}tr>{{'<'}}td [attr.colspan]="1 + 1">One-Two{{'<'}}/td>{{'<'}}/tr>
-    </pre>
-  </div>
+        </pre>
+      </div>
+    </div>
+  </anguide-question>
 
-  <p class="anguide-question">
-    When do we use <b>Class Binding</b> and when ngClass?
-  </p>
-  <p class="anguide-answer">
-    When adding or removing classes from the class attribute. Class binding 
-    allows you to bind all-or-nothing class names as well as single classes. 
-    NgClass directive is used when multiple class names have to be managed at 
-    the same time.
-  </p>
-  <div class="anguide-code-container">
-    <pre class="prettyprint linenums lang-html">
+  <anguide-question>
+    <div class="question">
+      When do we use <b>Class Binding</b> and when ngClass?
+    </div>
+    <div class="answer">
+      When adding or removing classes from the class attribute. Class binding 
+      allows you to bind all-or-nothing class names as well as single classes. 
+      NgClass directive is used when multiple class names have to be managed at 
+      the same time.
+      <div class="anguide-code-container">
+        <pre class="prettyprint linenums lang-html">
 {{'<'}}!-- reset/override all class names with a binding  -->
 {{'<'}}div class="bad curly special" [class]="badCurly">Bad curly{{'<'}}/div>
 {{'<'}}!-- toggle the "special" class on/off with a property -->
 {{'<'}}div [class.special]="isSpecial">The class binding is special{{'<'}}/div>
-    </pre>
-  </div>
+        </pre>
+      </div>
+    </div>
+  </anguide-question>
 
-  <p class="anguide-question">
-    When do we use <b>Style Binding</b> and when ngStyle?
-  </p>
-  <p class="anguide-answer">
-    To set inline styles we can use style binding. This is fine for single 
-    styles but the directive NgStyle is preferred when several inline styles 
-    are to be set.
-  </p>
-  <div class="anguide-code-container">
-    <pre class="prettyprint linenums lang-html">
+  <anguide-question>
+    <div class="question">
+      When do we use <b>Style Binding</b> and when ngStyle?
+    </div>
+    <div class="answer">
+      To set inline styles we can use style binding. This is fine for single 
+      styles but the directive NgStyle is preferred when several inline styles 
+      are to be set.
+      <div class="anguide-code-container">
+        <pre class="prettyprint linenums lang-html">
 {{'<'}}!-- The style property cna be written with dash separator or camelCase notation  -->
 {{'<'}}button [style.color]="isSpecial ? 'red': 'green'">Red{{'<'}}/button>
 {{'<'}}button [style.background-color]="canSave ? 'cyan': 'grey'" >Save{{'<'}}/button>
 {{'<'}}button [style.backgroundColor]="canSave ? 'cyan': 'grey'" >Save{{'<'}}/button>
-    </pre>
-  </div>
+        </pre>
+      </div>
+    </div>
+  </anguide-question>
 
-  <p class="anguide-question">
-    Why is it said that "The two-way binding syntax is really just syntactic 
-    sugar for a property binding and an event binding"?
-  </p>
-  <p class="anguide-answer">
-    Angular "desugars" 2 way binding to property and event binding.
-  </p>
-  <div class="anguide-code-container">
-    <pre class="prettyprint linenums lang-html">
+  <anguide-question>
+    <div class="question">
+      Why is it said that "The two-way binding syntax is really just syntactic 
+      sugar for a property binding and an event binding"?
+    </div>
+    <div class="answer">
+      Angular "desugars" 2 way binding to property and event binding.
+      <div class="anguide-code-container">
+        <pre class="prettyprint linenums lang-html">
 {{'<'}}!-- Angular assigns the $event value to the fontSizePx variable.  -->
 {{'<'}}app-sizer [(size)]="fontSizePx">{{'<'}}/app-sizer>
 {{'<'}}app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event">{{'<'}}/app-sizer>
-    </pre>
-  </div>
+        </pre>
+      </div>
+    </div>
+  </anguide-question>
 
-  <p class="anguide-question">
-    Are NgClass, NgModel, NgStyle attribute directives or structural directives?
-  </p>
-  <p class="anguide-answer">
-    They are examples of attribute directives. Attribute directives are meant to 
-    modify the behavior of HTML elements, attributes, properties or components.
-  </p>
-  <div>
-    <ul>
-      <li>NgClass - add and remove a set of CSS classes</li>
-      <li>NgStyle - add and remove a set of HTML styles</li>
-      <li>NgModel - two-way data binding to an HTML form element</li>
-    </ul>
-  </div>
+  <anguide-question>
+    <div class="question">
+      Are NgClass, NgModel, NgStyle attribute directives or structural directives?
+    </div>
+    <div class="answer">
+      They are examples of attribute directives. Attribute directives are meant to 
+      modify the behavior of HTML elements, attributes, properties or components.
+      <ul>
+        <li>NgClass - add and remove a set of CSS classes</li>
+        <li>NgStyle - add and remove a set of HTML styles</li>
+        <li>NgModel - two-way data binding to an HTML form element</li>
+      </ul>
+    </div>
+  </anguide-question>
 
-  <p class="anguide-question">
-    What is Content Projection?
-  </p>
-  <p class="anguide-answer">
-    Known in AngularJS as transclusion it allows configurable content to be displayed
-    in specific parts of a component. It uses the directive ng-content.
-    There are several ways to implement content projection in Angular: by class, 
-    by selector. The component anguide-question in this guide is an example of 
-    content projection.
-  </p>
+  <anguide-question>
+    <div class="question">
+      What is Content Projection?
+    </div>
+    <div class="answer">
+      Known in AngularJS as transclusion it allows configurable content to be displayed
+      in specific parts of a component. It uses the directive ng-content.
+      Two ways to implement content projection in Angular are: by tag element and 
+      by class selector. 
+      <p>The component anguide-question in this guide is an example of 
+      content projection.</p>
+      <div class="anguide-code-container">
+        <pre class="prettyprint linenums lang-html">
+{{'<'}}!-- The content withing the question and answer classes will be projected into the anguide-question component  -->
+{{'<'}}anguide-question>
+  {{'<'}}div class="question">
+  What is Content Projection?
+  {{'<'}}/div>
+  {{'<'}}div class="answer">
+  Known in AngularJS as transclusion it allows configurable content to be displayed in ...
+  ...
+  {{'<'}}/div>
+{{'<'}}/anguide-question>
+        </pre>
+      </div>
+      <div class="anguide-code-container">
+          <pre class="prettyprint linenums lang-html">
+{{'<'}}!-- anguide-question component -->
+{{'<'}}div class="anguide-question-container">
+  {{'<'}}div class="anguide-question">
+    {{'<'}}ng-content select=".question">{{'<'}}/ng-content>
+  {{'<'}}/div>
+  {{'<'}}div class="anguide-answer">
+    {{'<'}}ng-content select=".answer">{{'<'}}/ng-content>
+  {{'<'}}/div>
+{{'<'}}/div>
+          </pre>
+        </div>
+    </div>
+  </anguide-question>
+
+  <anguide-question>
+    <div class="question">
+      What is the difference between ng-content and ng-template?
+    </div>
+    <div class="answer">
+      <p><b>ng-template</b></p>
+      <p>Angular uses ng-template in structural directives like *ngIf, *ngFor, etc.
+          The host element or the element in which the directive is applied is wrapped 
+          inside a ng-template. If the *ngIf for example is evaluated to false, then 
+          the ng-template is replaced by comments and its content is not displayed.</p>
+      <p><b>ng-container</b></p>
+      <p>Angular uses to wrap content without putting it in the DOM. Only what its 
+        inside is present in the DOM
+      </p>
+    </div>
+  </anguide-question>
+
+  <anguide-question>
+    <div class="question">
+      What is the difference between the <b>safe navigation operator (?)</b> and the 
+      <b>non-null assertion operator (!)</b>?
+    </div>
+    <div class="answer">
+      <p><b>Safe navigation operator</b></p>
+      <p>Prevents TypeError: Cannont read property ... of null/undefined. If a property
+        is not defined for example, it is just not shown. 
+        It works perfectly with long property paths such as a?.b?.c?.d
+      </p>
+      <p><b>Non-null assertion operator</b></p>
+      <p> the non-null assertion operator does not guard against null or undefined. 
+        Rather it tells the TypeScript type checker to suspend strict null checks 
+        for a specific property expression.
+      </p>
+    </div>
+  </anguide-question>
+
+  <anguide-question>
+    <div class="question">
+      What does the <b>$any()</b> type cast function do?
+    </div>
+    <div class="answer">
+      When, during AOT compilation, an expression is not possible to specify its 
+      type then one can silece the error  by wrapping the expression in $any().
+      This casts the expression to type any.
+      <div class="anguide-code-container">
+        <pre class="prettyprint linenums lang-html">
+{{'<'}}!-- anguide-question component -->
+{{'<'}}p>The item's undeclared best by date is: {{'{{'}}$any(item).bestByDate}}{{'<'}}/p>
+        </pre>
+      </div>
+    </div>
+  </anguide-question>
 </div>
