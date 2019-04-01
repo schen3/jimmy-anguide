@@ -1,9 +1,12 @@
 <ul>
   <li *ngFor="let option of options">
-    <h2>
-      <a routerLink="{{option.url}}" routerLinkActive="active">
-        {{option.label}}
-      </a>
-    </h2>
+    <h2><a routerLink="{{option.url}}" routerLinkActive="active">{{option.label}}</a></h2>
+    <ng-container *ngIf="option.submenu">
+      <ul>
+        <li *ngFor="let sub of option.submenu">
+          <h3><a routerLink="{{sub.url}}" routerLinkActive="active">{{sub.label}}</a></h3>
+        </li>
+      </ul>
+    </ng-container>
   </li>
 </ul>

@@ -15,7 +15,35 @@ export class AppComponent {
     label: 'architecture'
   }, {
     url: '/components',
-    label: 'components'
+    label: 'components',
+    submenu: [{
+      url: '/components/template-syntax',
+      label: 'Template Syntax'
+    }, {
+      url: '/components/lifecycle-hooks',
+      label: 'Lifecycle Hooks'
+    }, {
+      url: '/components/interaction',
+      label: 'Component Interaction'
+    }, {
+      url: '/components/styles',
+      label: 'Component Styles'
+    }, {
+      url: '/components/angular-elements',
+      label: 'Angular Elements'
+    }, {
+      url: '/components/dynamic-components',
+      label: 'Dynamic Components'
+    }, {
+      url: '/components/attribute-directives',
+      label: 'Attribute Directives'
+    }, {
+      url: '/components/structural-directives',
+      label: 'Structural Directives'
+    }, {
+      url: '/components/pipes',
+      label: 'Pipes'
+    }]
   }, {
     url: '/forms',
     label: 'forms'
@@ -40,5 +68,11 @@ export class AppComponent {
   }, {
     url: '/animations',
     label: 'animations'
-  }]
+  }];
+
+  ngAfterViewChecked(){
+    setTimeout(() => {
+      window['PR'].prettyPrint();
+    })
+  }
 }
