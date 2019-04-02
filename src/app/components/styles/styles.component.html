@@ -1,5 +1,57 @@
 <div class="anguide-topic">
   <h2>Styles</h2>
-  <h3>Special selectors</h3>
-  <anguide-style-selectors></anguide-style-selectors>
+
+  <anguide-question>
+    <div class="question">
+      What are the encapsulation views for a component available in Angular?
+    </div>
+    <div class="answer">
+      <ul>
+        <li>
+          <p><strong>ShadowDom</strong> - 
+          The component uses the browser's native ShadowDom implemtation. 
+          Component as well as styles are placed withing the shadow DOM</p>
+        </li>
+        <li>
+          <p><strong>Native</strong> - 
+          Uses a now deprecated version of the browser's native shadow DOM 
+          implementation</p>
+        </li>
+        <li>
+          <p><strong>Emulated</strong> - 
+          This is the default implementation. This emulates the native ShadowDom 
+          by renaming the styles to target the component in question
+          </p>
+        </li>
+        <li>
+          <p><strong>None</strong> - 
+          Angular does not view encapsulation. The styles are added to the 
+          global styles
+          </p>
+        </li>
+      </ul>
+      <div class="anguide-code-container">
+        <pre class="prettyprint linenums lang-js">
+// None encapsulation
+import {{'{'}} ViewEncapsulation } from '@angular/core';
+
+@Component({{'{'}}
+  selector: 'my-component',
+  templateUrl: 'my-component.component.html',
+  styles: [...],
+  encapsulation: ViewEncapsulation.None
+})
+        </pre>
+      </div>
+    </div>
+  </anguide-question>
+
+  <anguide-question>
+    <div class="question">
+      Show the difference between the 3 specials Angular component style selectors.
+    </div>
+    <div class="answer">
+      <anguide-style-selectors></anguide-style-selectors>
+    </div>
+  </anguide-question>
 </div>
