@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-first-child',
+  selector: 'ja-first-child',
   templateUrl: './first-child.component.html',
   styleUrls: ['./first-child.component.scss']
 })

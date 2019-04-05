@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-http-client',
+  selector: 'ja-http-client',
   templateUrl: './http-client.component.html',
   styleUrls: ['./http-client.component.sass']
 })

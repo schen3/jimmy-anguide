@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-structural-directives',
+  selector: 'ja-structural-directives',
   templateUrl: './structural-directives.component.html',
   styleUrls: ['./structural-directives.component.scss']
 })

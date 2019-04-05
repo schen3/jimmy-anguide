@@ -7,7 +7,7 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-.anguide-section {
+.ja-section {
   padding: 24px;
 }
 
@@ -16,11 +16,11 @@ body {
   color: $light-blue;
 }
 
-.anguide-italic-font {
+.ja-italic-font {
   @extend %italic-blue-font;
 }
 
-.anguide-code-container {
+.ja-code-container {
   width: 90%;
   margin: 16px auto;
   border: 1px solid $prettyprint_bg;

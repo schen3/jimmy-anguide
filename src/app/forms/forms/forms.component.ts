@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-forms',
+  selector: 'ja-forms',
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.sass']
 })

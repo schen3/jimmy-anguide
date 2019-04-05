@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-home',
+  selector: 'ja-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
   
-  title = 'angular-guide';
+  title = 'JIMMY Anguide';
 
   constructor() { }
 

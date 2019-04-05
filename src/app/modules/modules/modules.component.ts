@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-modules',
+  selector: 'ja-modules',
   templateUrl: './modules.component.html',
   styleUrls: ['./modules.component.sass']
 })

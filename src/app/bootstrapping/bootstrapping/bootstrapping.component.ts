@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-bootstrapping',
+  selector: 'ja-bootstrapping',
   templateUrl: './bootstrapping.component.html',
   styleUrls: ['./bootstrapping.component.sass']
 })

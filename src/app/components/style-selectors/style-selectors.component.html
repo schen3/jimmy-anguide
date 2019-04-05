@@ -1,46 +1,46 @@
 <p>
-  Lets apply styles to this component <span class="anguide-italic-font">{{ '<' }}anguide-style-selectors></span>
+  Lets apply styles to this component <span class="ja-italic-font">{{ '<' }}ja-style-selectors></span>
 </p>
 <ul>
   <li>:host</li>
   <li>:host-context</li>
   <li>
-    <anguide-first-child><span>>>> and ::ng-deep</span></anguide-first-child>
+    <ja-first-child><span>>>> and ::ng-deep</span></ja-first-child>
   </li>
 </ul>
 
-<div class="anguide-code-container">
+<div class="ja-code-container">
   <pre class="prettyprint linenums lang-html">
-{{ '<' }}div class="anguide-topic">
+{{ '<' }}div class="ja-topic">
   ...
-  {{ '<' }}anguide-style-selectors>
-    Lets apply styles to this component {{ '<' }}anguide-style-selectors>
+  {{ '<' }}ja-style-selectors>
+    Lets apply styles to this component {{ '<' }}ja-style-selectors>
     {{ '<' }}ul>
       {{ '<' }}li>:host{{ '<' }}/li>
       {{ '<' }}li>:host-context{{ '<' }}/li>
       {{ '<' }}li>
-        {{ '<' }}anguide-first-child>{{ '<' }}span>>>> and ::ng-deep{{ '<' }}/span>{{ '<' }}/anguide-first-child>
+        {{ '<' }}ja-first-child>{{ '<' }}span>>>> and ::ng-deep{{ '<' }}/span>{{ '<' }}/ja-first-child>
       {{ '<' }}/li>
     {{ '<' }}/ul>
-  {{ '<' }}/anguide-style-selectors>
+  {{ '<' }}/ja-style-selectors>
 {{ '<' }}/div>
   </pre>
 </div>
 
 <p>And now the style selctors are:</p>
 
-<div class="anguide-code-container">
+<div class="ja-code-container">
   <pre class="prettyprint linenums lang-html">
 :host {{ '{' }}
   display: block;
   border: 1px solid red;
 }
 
-:host-context(.anguide-topic) li {{ '{' }}
+:host-context(.ja-topic) li {{ '{' }}
   font-style: italic;
 }
 
-::ng-deep anguide-first-child > span {{ '{' }}
+::ng-deep ja-first-child > span {{ '{' }}
   color: red;
   text-transform: uppercase;
 }

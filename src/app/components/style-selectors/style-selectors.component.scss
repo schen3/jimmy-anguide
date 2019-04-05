@@ -3,11 +3,11 @@
   border: 1px solid red;
 }
 
-:host-context(.anguide-topic) li {
+:host-context(.ja-topic) li {
   font-style: italic;
 }
 
-::ng-deep anguide-first-child > span {
+::ng-deep ja-first-child > span {
   color: red;
   text-transform: uppercase;
 }

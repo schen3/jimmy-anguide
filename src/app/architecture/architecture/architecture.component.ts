@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-architecture',
+  selector: 'ja-architecture',
   templateUrl: './architecture.component.html',
   styleUrls: ['./architecture.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-attribute-directives',
+  selector: 'ja-attribute-directives',
   templateUrl: './attribute-directives.component.html',
   styleUrls: ['./attribute-directives.component.scss']
 })

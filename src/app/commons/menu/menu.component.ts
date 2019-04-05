@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'anguide-menu',
+  selector: 'ja-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })

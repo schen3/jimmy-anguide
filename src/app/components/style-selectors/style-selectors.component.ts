@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-style-selectors',
+  selector: 'ja-style-selectors',
   templateUrl: './style-selectors.component.html',
   styleUrls: ['./style-selectors.component.scss']
 })

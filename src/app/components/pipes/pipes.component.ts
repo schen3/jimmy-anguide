@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-pipes',
+  selector: 'ja-pipes',
   templateUrl: './pipes.component.html',
   styleUrls: ['./pipes.component.scss']
 })

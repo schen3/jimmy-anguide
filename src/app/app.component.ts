@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'anguide-root',
+  selector: 'ja-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

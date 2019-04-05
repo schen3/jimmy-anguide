@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-lifecycle-hooks',
+  selector: 'ja-lifecycle-hooks',
   templateUrl: './lifecycle-hooks.component.html',
   styleUrls: ['./lifecycle-hooks.component.scss']
 })

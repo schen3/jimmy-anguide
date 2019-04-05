@@ -1,16 +1,16 @@
-<div class="anguide-topic">
+<div class="ja-topic">
   <h2>Template Syntax</h2>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       How is the script tag treated in and HTML template?
     </div>
     <div class="answer">
       SCRIPT tags are simply ignored to prevent safety risks of encripting scripts
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       How are different the HTML attributes than the DOM properties?
     </div>
@@ -37,9 +37,9 @@
         </li>
       </ul> 
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       What is ONE-WAY binding?
     </div>
@@ -48,9 +48,9 @@
       target element. You can't bind to a property of the target element to read 
       it. You can only set it.
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       Are property binding and interpolation the same?
     </div>
@@ -60,7 +60,7 @@
       component property.
       When binding data values as strings both can be used exactly for the same. 
         The implementation though is defferent:
-      <div class="anguide-code-container">
+      <div class="ja-code-container">
         <pre class="prettyprint linenums lang-html">
 {{'<'}}p>{{'<'}}img src="{{ '{{' }}heroImageUrl}}"> is the {{'<'}}i>interpolated{{'<'}}/i> image.{{'<'}}/p>
 {{'<'}}p>{{'<'}}img [src]="heroImageUrl"> is the {{'<'}}i>property bound{{'<'}}/i> image.{{'<'}}/p>
@@ -70,9 +70,9 @@
         </pre>
         </div>
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       When do we use <b>Attribute Binding</b>?
     </div>
@@ -82,16 +82,16 @@
       <b>We must use attribute binding when there is no property to bind.</b>
       The use of attribute binding is needed to cases like ARIA, colspan, svg 
       for example since they are pure attributes.
-      <div class="anguide-code-container">
+      <div class="ja-code-container">
         <pre class="prettyprint linenums lang-html">
 {{'<'}}button [attr.aria-label]="actionName">{{actionName}} with Aria{{'<'}}/button>
 {{'<'}}tr>{{'<'}}td [attr.colspan]="1 + 1">One-Two{{'<'}}/td>{{'<'}}/tr>
         </pre>
       </div>
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       When do we use <b>Class Binding</b> and when ngClass?
     </div>
@@ -100,7 +100,7 @@
       allows you to bind all-or-nothing class names as well as single classes. 
       NgClass directive is used when multiple class names have to be managed at 
       the same time.
-      <div class="anguide-code-container">
+      <div class="ja-code-container">
         <pre class="prettyprint linenums lang-html">
 {{'<'}}!-- reset/override all class names with a binding  -->
 {{'<'}}div class="bad curly special" [class]="badCurly">Bad curly{{'<'}}/div>
@@ -109,9 +109,9 @@
         </pre>
       </div>
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       When do we use <b>Style Binding</b> and when ngStyle?
     </div>
@@ -119,7 +119,7 @@
       To set inline styles we can use style binding. This is fine for single 
       styles but the directive NgStyle is preferred when several inline styles 
       are to be set.
-      <div class="anguide-code-container">
+      <div class="ja-code-container">
         <pre class="prettyprint linenums lang-html">
 {{'<'}}!-- The style property cna be written with dash separator or camelCase notation  -->
 {{'<'}}button [style.color]="isSpecial ? 'red': 'green'">Red{{'<'}}/button>
@@ -128,16 +128,16 @@
         </pre>
       </div>
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       Why is it said that "The two-way binding syntax is really just syntactic 
       sugar for a property binding and an event binding"?
     </div>
     <div class="answer">
       Angular "desugars" 2 way binding to property and event binding.
-      <div class="anguide-code-container">
+      <div class="ja-code-container">
         <pre class="prettyprint linenums lang-html">
 {{'<'}}!-- Angular assigns the $event value to the fontSizePx variable.  -->
 {{'<'}}app-sizer [(size)]="fontSizePx">{{'<'}}/app-sizer>
@@ -145,9 +145,9 @@
         </pre>
       </div>
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       Are NgClass, NgModel, NgStyle attribute directives or structural directives?
     </div>
@@ -160,9 +160,9 @@
         <li>NgModel - two-way data binding to an HTML form element</li>
       </ul>
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       What is Content Projection?
     </div>
@@ -171,12 +171,12 @@
       in specific parts of a component. It uses the directive ng-content.
       Two ways to implement content projection in Angular are: by tag element and 
       by class selector. 
-      <p>The component anguide-question in this guide is an example of 
+      <p>The component ja-question in this guide is an example of 
       content projection.</p>
-      <div class="anguide-code-container">
+      <div class="ja-code-container">
         <pre class="prettyprint linenums lang-html">
-{{'<'}}!-- The content withing the question and answer classes will be projected into the anguide-question component  -->
-{{'<'}}anguide-question>
+{{'<'}}!-- The content withing the question and answer classes will be projected into the ja-question component  -->
+{{'<'}}ja-question>
   {{'<'}}div class="question">
   What is Content Projection?
   {{'<'}}/div>
@@ -184,26 +184,26 @@
   Known in AngularJS as transclusion it allows configurable content to be displayed in ...
   ...
   {{'<'}}/div>
-{{'<'}}/anguide-question>
+{{'<'}}/ja-question>
         </pre>
       </div>
-      <div class="anguide-code-container">
+      <div class="ja-code-container">
           <pre class="prettyprint linenums lang-html">
-{{'<'}}!-- anguide-question component -->
-{{'<'}}div class="anguide-question-container">
-  {{'<'}}div class="anguide-question">
+{{'<'}}!-- ja-question component -->
+{{'<'}}div class="ja-question-container">
+  {{'<'}}div class="ja-question">
     {{'<'}}ng-content select=".question">{{'<'}}/ng-content>
   {{'<'}}/div>
-  {{'<'}}div class="anguide-answer">
+  {{'<'}}div class="ja-answer">
     {{'<'}}ng-content select=".answer">{{'<'}}/ng-content>
   {{'<'}}/div>
 {{'<'}}/div>
           </pre>
         </div>
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       What is the difference between ng-content and ng-template?
     </div>
@@ -218,9 +218,9 @@
         inside is present in the DOM
       </p>
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       What is the difference between the <b>safe navigation operator (?)</b> and the 
       <b>non-null assertion operator (!)</b>?
@@ -237,9 +237,9 @@
         for a specific property expression.
       </p>
     </div>
-  </anguide-question>
+  </ja-question>
 
-  <anguide-question>
+  <ja-question>
     <div class="question">
       What does the <b>$any()</b> type cast function do?
     </div>
@@ -247,12 +247,12 @@
       When, during AOT compilation, an expression is not possible to specify its 
       type then one can silece the error  by wrapping the expression in $any().
       This casts the expression to type any.
-      <div class="anguide-code-container">
+      <div class="ja-code-container">
         <pre class="prettyprint linenums lang-html">
-{{'<'}}!-- anguide-question component -->
+{{'<'}}!-- ja-question component -->
 {{'<'}}p>The item's undeclared best by date is: {{'{{'}}$any(item).bestByDate}}{{'<'}}/p>
         </pre>
       </div>
     </div>
-  </anguide-question>
+  </ja-question>
 </div>

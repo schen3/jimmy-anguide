@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'anguide-animations',
+  selector: 'ja-animations',
   templateUrl: './animations.component.html',
   styleUrls: ['./animations.component.sass']
 })
