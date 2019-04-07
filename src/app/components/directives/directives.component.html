@@ -1,0 +1,46 @@
+<div class="ja-topic">
+  <h2>Directives</h2>
+
+  <p>There are three kinds of directives in Angular:</p>
+
+  <ul>
+    <li>Components—directives with a template.</li>
+    <li>Structural directives—change the DOM layout by adding and removing DOM elements.</li>
+    <li>Attribute directives—change the appearance or behavior of an element, component, 
+      or another directive.</li>
+  </ul>
+
+  <ja-message type="info">
+    <div>
+      You can apply many attribute directives to one host element BUT you can 
+      apply only one structural directive to a host element.
+    </div>
+  </ja-message>
+
+  <ja-question>
+    <div class="question">
+      Attribute Directive
+    </div>
+    <div class="answer">
+      <p>The following is an example of an attribute directive <strong>jaOnClickAction</strong></p>
+      <ja-attribute-directive-demo></ja-attribute-directive-demo>
+    </div>
+  </ja-question>
+
+  <ja-question>
+    <div class="question">
+      Structural Directive
+    </div>
+    <div class="answer">
+      <p>Structural directives are easy to recognize. An asterisk (*) precedes 
+        the directive attribute name *ngIf, *ngFor<strong></strong> </p>
+      <ja-message type="info">
+        <div>
+            The asterisk is "syntactic sugar". Internally, Angular translates the 
+            *ngIf attribute into a {{'<ng-'}}template> element, wrapped around the host element.
+        </div>
+      </ja-message>
+      <ja-structural-directive-demo></ja-structural-directive-demo>
+    </div>
+  </ja-question>
+</div>

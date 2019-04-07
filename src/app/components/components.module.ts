@@ -11,9 +11,8 @@ import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.compo
 import { InteractionComponent } from './interaction/interaction.component';
 import { AngularElementsComponent } from './angular-elements/angular-elements.component';
 import { DynamicComponentsComponent } from './dynamic-components/dynamic-components.component';
-import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
-import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { DirectivesComponent } from './directives/directives.component';
 import { OthersComponent } from './others/others.component';
 
 @NgModule({
@@ -26,6 +25,8 @@ import { OthersComponent } from './others/others.component';
     InteractionComponent,
     AngularElementsComponent,
     DynamicComponentsComponent,
+    PipesComponent,
+    DirectivesComponent,
     OthersComponent
   ],
   imports: [

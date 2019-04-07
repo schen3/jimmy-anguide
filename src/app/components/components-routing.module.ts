@@ -7,9 +7,8 @@ import { InteractionComponent } from './interaction/interaction.component';
 import { StylesComponent } from './styles/styles.component';
 import { AngularElementsComponent } from './angular-elements/angular-elements.component';
 import { DynamicComponentsComponent } from './dynamic-components/dynamic-components.component';
-import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
-import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { DirectivesComponent } from './directives/directives.component';
 import { OthersComponent } from './others/others.component';
 
 const routes: Routes = [{
@@ -35,11 +34,8 @@ const routes: Routes = [{
   path: 'dynamic-components',
   component: DynamicComponentsComponent
 }, {
-  path: 'attribute-directives',
-  component: AttributeDirectivesComponent
-}, {
-  path: 'structural-directives',
-  component: StructuralDirectivesComponent
+  path: 'directives',
+  component: DirectivesComponent
 }, {
   path: 'pipes',
   component: PipesComponent

@@ -35,11 +35,8 @@ export class AppComponent {
       url: '/components/dynamic-components',
       label: 'Dynamic Components'
     }, {
-      url: '/components/attribute-directives',
-      label: 'Attribute Directives'
-    }, {
-      url: '/components/structural-directives',
-      label: 'Structural Directives'
+      url: '/components/directives',
+      label: 'Directives'
     }, {
       url: '/components/pipes',
       label: 'Pipes'
