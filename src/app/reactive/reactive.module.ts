@@ -5,9 +5,14 @@ import { ReactiveRoutingModule } from './reactive-routing.module';
 import { ReactiveComponent } from './reactive/reactive.component';
 import { CommonsModule } from '../commons/commons.module';
 import { IntroComponent } from './intro/intro.component';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
-  declarations: [ReactiveComponent, IntroComponent],
+  declarations: [
+    ReactiveComponent,
+    IntroComponent,
+    ObservableComponent
+  ],
   imports: [
     CommonModule,
     CommonsModule,

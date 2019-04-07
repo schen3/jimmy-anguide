@@ -53,6 +53,9 @@ export class AppComponent {
     submenu: [{
       url: '/reactive/intro',
       label: 'Intro'
+    }, {
+      url: '/reactive/observables',
+      label: 'Observables'
     }]
   }, {
     url: '/bootstrapping',

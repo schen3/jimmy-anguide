@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IntroComponent } from './intro/intro.component';
+import { ObservableComponent } from './observable/observable.component';
 
 const routes: Routes = [{
   path: '',
@@ -10,6 +11,9 @@ const routes: Routes = [{
 }, {
   path: 'intro',
   component: IntroComponent
+}, {
+  path: 'observables',
+  component: ObservableComponent
 }];
 
 @NgModule({

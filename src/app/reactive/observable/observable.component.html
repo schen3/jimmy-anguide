@@ -1,0 +1,39 @@
+<div class="ja-topic">
+  <h2>Introduction</h2>
+
+  <ja-message>
+    Many concepts in this section were taken from: 
+    <a href="https://rxjs-dev.firebaseapp.com/guide/overview" target="blank">RxJS Docs</a>
+    , 
+    <a href="http://reactivex.io/" target="blank">ReactiveX Docs</a>
+    , and 
+    <a href="https://en.wikipedia.org/wiki/Reactive_programming" target="blank">Wikipedia</a>
+  </ja-message>
+
+  <ja-question>
+    <div class="question">
+      What is an Observable?
+    </div>
+    <div class="answer">
+      Observables are lazy Push collections of multiple values. 
+      Observables provide support for passing messages between publishers and 
+      subscribers in your application.
+    </div>
+  </ja-question>
+  
+  <ja-question>
+    <div class="question">
+      Hot or Cold Observables?
+    </div>
+    <div class="answer">
+      <p class="ja-italic-font">When does an Observable begin emitting its sequence of items?</p>
+      A “hot” Observable may begin emitting items as soon as it is created, 
+      and so any observer who later subscribes to that Observable may start 
+      observing the sequence somewhere in the middle. 
+      A “cold” Observable, on the other hand, waits until an observer subscribes 
+      to it before it begins to emit items, and so such an observer is guaranteed 
+      to see the whole sequence from the beginning. 
+      <strong>Observables are cold by default.</strong>
+    </div>
+  </ja-question>
+</div>

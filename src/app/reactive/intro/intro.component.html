@@ -82,4 +82,26 @@
       </ul>
     </div>
   </ja-question>
+
+  <ja-question>
+    <div class="question">
+      PULL vs PUSH communication systems
+    </div>
+    <div class="answer">
+        Pull and Push are two different protocols that describe how a data Producer 
+        can communicate with a data Consumer.
+        <p>PULL systems</p>
+        <p>The Consumer decides when to get data from Producer. Examples: functions, 
+          generators in JS. The function is the Producer of data and who calls 
+          the function is the Consumer. Data is created only when the consumer 
+          calls the function, therefore Consumer actively controls when he receives 
+          the data. Same with generators, whoever calls generator.next() has control, 
+          not the Generator itself.</p>
+        <p>PUSH systems</p>
+        <p>The Producer decides when to send data to Consumer. Examples: Promises 
+          and Observables. Observables are said to be lazy because data is delivered 
+          only when a subscriber exists. This is not the case of Promises since they 
+          resolve data independently of having a callback.</p>
+    </div>
+  </ja-question>
 </div>
