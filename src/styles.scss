@@ -1,10 +1,22 @@
+@import './variables.scss';
+
 /* You can add global styles to this file, and also import other style files */
-$light-blue: rgb(82, 137, 219);
-$prettyprint_bg: #402c66;
-$prettyprint_light_line: #503b75;
 
 body {
   font-family: 'Quicksand', sans-serif;
+}
+
+button {
+  padding: 8px 16px;
+  background: $prettyprint_bg;
+  border: none;
+  color: white;
+  margin: 0 8px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $prettyprint_light_2;
+  }
 }
 
 .ja-section {
@@ -33,7 +45,8 @@ body {
   }
 
   li:nth-child(even) {
-    background: $prettyprint_light_line!important;
+    background: $prettyprint_light_1!important;
   }
 }
+
 
