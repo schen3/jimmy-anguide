@@ -1,0 +1,22 @@
+@import '../../../variables.scss';
+
+.ja-message {
+  border-left: 4px solid;
+  font-size: 12px;
+  padding: 8px 16px;
+  margin: 16px 0;
+  font-style: italic;
+  
+  &--info {
+    border-left-color: $info-msg-highlight;
+    background-color: $info-msg-bg;
+  }
+
+  &--success {
+    background-color: $success-msg-bg;
+  }
+
+  &--danger {
+    background-color: $danger-msg-bg;
+  }
+}
