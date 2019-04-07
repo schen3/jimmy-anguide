@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AttributeDirectiveDemoModule } from './attribute-directive-demo/attribute-directive-demo.module';
 import { HostListenerDemoModule } from './host-listener-demo/host-listener-demo.module';
 import { StructuralDirectiveDemoModule } from './structural-directive-demo/structural-directive-demo.module';
+import { PipeDemoModule } from './pipe-demo/pipe-demo.module';
 
 @NgModule({
   declarations: [],
@@ -12,7 +13,8 @@ import { StructuralDirectiveDemoModule } from './structural-directive-demo/struc
   exports: [
     HostListenerDemoModule,
     AttributeDirectiveDemoModule,
-    StructuralDirectiveDemoModule
+    StructuralDirectiveDemoModule,
+    PipeDemoModule
   ]
 })
 export class DemosModule { }

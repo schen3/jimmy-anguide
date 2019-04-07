@@ -1,0 +1,48 @@
+<p>
+  {{pipeDemoText}}
+</p>
+<p>
+  {{'{{'}}pipeDemoText | splitBy}}: 
+  <span class="ja-italic-font">{{pipeDemoText | splitBy}}</span>
+</p>
+<p>
+  {{'{{'}}pipeDemoText | splitBy:'J'}}: 
+  <span class="ja-italic-font">{{pipeDemoText | splitBy:'J'}}</span>
+</p>
+<p>
+  {{'{{'}}pipeDemoText | splitBy:'Jimmy'}}: 
+  <span class="ja-italic-font">{{pipeDemoText | splitBy:'Jimmy':'1'}}</span>
+</p>
+
+<div class="ja-code-container">
+  <pre class="prettyprint linenums lang-html">
+{{'<'}}!--Implementation of splitBy pipe-->
+{{'<'}}p>
+  {{'<'}}span class="ja-italic-font">{{pipeDemoText | splitBy}}{{'<'}}/span>
+{{'<'}}/p>
+{{'<'}}p>
+  {{'<'}}span class="ja-italic-font">{{pipeDemoText | splitBy:'J'}}{{'<'}}/span>
+{{'<'}}/p>
+{{'<'}}p>
+  {{'<'}}span class="ja-italic-font">{{pipeDemoText | splitBy:'Jimmy':'1'}}{{'<'}}/span>
+{{'<'}}/p></pre>
+</div>
+
+<div class="ja-code-container">
+  <pre class="prettyprint linenums lang-js">
+{{"// splitBy pipe definition
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'splitBy'
+})
+export class SplitByPipe implements PipeTransform {
+
+  transform(value: string, ...args: any): any {
+    const character = args ? args[0] : '';
+    return value.toString().split(character);
+  }
+
+}
+"}}</pre>
+</div>
