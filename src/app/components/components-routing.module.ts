@@ -10,6 +10,7 @@ import { DynamicComponentsComponent } from './dynamic-components/dynamic-compone
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { OthersComponent } from './others/others.component';
 
 const routes: Routes = [{
   path: '',
@@ -42,6 +43,9 @@ const routes: Routes = [{
 }, {
   path: 'pipes',
   component: PipesComponent
+}, {
+  path: 'others',
+  component: OthersComponent
 }];
 
 @NgModule({

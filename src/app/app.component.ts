@@ -43,6 +43,9 @@ export class AppComponent {
     }, {
       url: '/components/pipes',
       label: 'Pipes'
+    }, {
+      url: '/components/others',
+      label: 'Others'
     }]
   }, {
     url: '/forms',

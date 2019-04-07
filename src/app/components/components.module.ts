@@ -14,6 +14,7 @@ import { DynamicComponentsComponent } from './dynamic-components/dynamic-compone
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { OthersComponent } from './others/others.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,7 @@ import { PipesComponent } from './pipes/pipes.component';
     InteractionComponent,
     AngularElementsComponent,
     DynamicComponentsComponent,
-    AttributeDirectivesComponent,
-    StructuralDirectivesComponent,
-    PipesComponent
+    OthersComponent
   ],
   imports: [
     CommonModule,
