@@ -1,0 +1,72 @@
+<button [jaOnClickAction]="alertInnerHTML">alert on click</button>
+<button [jaOnClickAction]="logInnerHTML">log on click</button>
+<button [jaOnClickAction]="toggleInnerHTML">toggle upper/lower case on click</button>
+
+<div class="ja-code-container">
+  <pre class="prettyprint linenums lang-html">
+{{'<'}}!--Use of directive jaOnClickAction -->
+{{'<'}}button [jaOnClickAction]="alertInnerHTML">alert on click{{'<'}}/button>
+{{'<'}}button [jaOnClickAction]="logInnerHTML">log on click{{'<'}}/button>
+{{'<'}}button [jaOnClickAction]="toggleInnerHTML">toggle upper/lower case on click{{'<'}}/button>
+</pre>
+</div>
+
+<div class="ja-code-container">
+  <pre class="prettyprint linenums">
+{{"// OnClickActionDirective
+
+import { Directive, Input, HostListener } from '@angular/core';
+
+@Directive({
+  selector: '[jaOnClickAction]'
+})
+export class OnClickActionDirective {
+
+  @Input('jaOnClickAction') actionHandler;
+
+  constructor() { }
+
+  @HostListener('click', ['$event.target']) 
+  handlerAction(target) {
+    if (typeof this.actionHandler === 'function') {
+      this.actionHandler(target);
+    }
+  }
+}
+"}}</pre>
+</div>
+
+
+<div class="ja-code-container">
+    <pre class="prettyprint linenums">
+{{"// AttributeDirectiveDemoComponent
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'ja-attribute-directive-demo',
+  templateUrl: './attribute-directive-demo.component.html',
+  styleUrls: ['./attribute-directive-demo.component.scss']
+})
+export class AttributeDirectiveDemoComponent {
+
+  isUpperCase: boolean = false;
+
+  constructor() { }
+
+  alertInnerHTML(event: any = {}) {
+    alert(event.innerHTML);
+  }
+
+  logInnerHTML(event: any = {}) {
+    console.log(event.innerHTML);
+  }
+
+  toggleInnerHTML(event: any = {}) {
+    event.innerHTML = this.isUpperCase ? 
+      event.innerHTML.toLowerCase() : event.innerHTML.toUpperCase();
+    this.isUpperCase = !this.isUpperCase;
+  }
+}
+"}}</pre>
+</div>
