@@ -49,7 +49,11 @@ export class AppComponent {
     label: 'forms'
   }, {
     url: '/reactive',
-    label: 'reactive'
+    label: 'reactive',
+    submenu: [{
+      url: '/reactive/intro',
+      label: 'Intro'
+    }]
   }, {
     url: '/bootstrapping',
     label: 'bootstrapping'

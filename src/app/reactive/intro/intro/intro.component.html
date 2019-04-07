@@ -1,0 +1,85 @@
+<div class="ja-topic">
+  <h2>Introduction</h2>
+
+  <ja-message>
+    Many concepts in this section were taken from: 
+    <a href="https://rxjs-dev.firebaseapp.com/guide/overview" target="blank">RxJS Docs</a>
+    , 
+    <a href="http://reactivex.io/" target="blank">ReactiveX Docs</a>
+    , and 
+    <a href="https://en.wikipedia.org/wiki/Reactive_programming" target="blank">Wikipedia</a>
+  </ja-message>
+
+  <ja-question>
+    <div class="question">
+      What is <span class="ja-italic-font">reactive programming</span>?
+    </div>
+    <div class="answer">
+      It is a declarative programming paradigm concerned with data flows and the propagation
+      of change.
+    </div>
+  </ja-question>
+
+  <ja-question>
+    <div class="question">
+      What is ReactiveX?
+    </div>
+    <div class="answer">
+      It is an API for asynchronous programming with observable streams. It combines 
+      the Observer pattern, the iterator pattern, and functional programming concepts.
+      It is a collection of open source projects for different languages like:
+      <ul>
+        <li><a href="https://github.com/ReactiveX/RxJava" target="blank">RxJava</a></li>
+        <li><a href="https://github.com/ReactiveX/rxjs" target="blank">RxJs</a></li>
+        <li><a href="https://github.com/dotnet/reactive" target="blank">Rx.NET</a></li>
+        <li><a href="http://reactivex.io/rxscala/" target="blank">RxScala</a></li>
+        <li><a href="https://github.com/ReactiveX/RxClojure" target="blank">RxClojure</a></li>
+        <li><a href="https://github.com/ReactiveX/RxSwift" target="blank">RxSwift</a></li>
+      </ul>
+    </div>
+  </ja-question>
+  
+  <ja-question>
+    <div class="question">
+      What is RxJS?
+    </div>
+    <div class="answer">
+      (Reactive Extensions for JavaScript) RxJS is a library for composing 
+      asynchronous and event-based programs by using observable sequences.
+    </div>
+  </ja-question>
+
+  <ja-question>
+    <div class="question">
+      Main concepts in RxJS
+    </div>
+    <div class="answer">
+      <ul>
+        <li>
+          <span class="ja-italic-font">Observable</span>: 
+          represents the idea of an invokable collection of future values or events.
+        </li>
+        <li>
+          <span class="ja-italic-font">Observer</span>: 
+          is a collection of callbacks that knows how to listen to values delivered by the Observable.
+        </li>
+        <li>
+          <span class="ja-italic-font">Subscription</span>: 
+          represents the execution of an Observable, is primarily useful for cancelling the execution.
+        </li>
+        <li>
+          <span class="ja-italic-font">Operators</span>: 
+          are pure functions that enable a functional programming style of dealing with collections with operations like map, filter, concat, reduce, etc.
+        </li>
+        <li>
+          <span class="ja-italic-font">Subject</span>: 
+          is the equivalent to an EventEmitter, and the only way of multicasting a value or event to multiple Observers.
+        </li>
+        <li>
+          <span class="ja-italic-font">Schedulers</span>: 
+          are centralized dispatchers to control concurrency, allowing us to coordinate when computation happens on e.g. setTimeout or requestAnimationFrame or others.
+        </li>
+      </ul>
+    </div>
+  </ja-question>
+</div>

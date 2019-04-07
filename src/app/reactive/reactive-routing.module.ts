@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ReactiveComponent } from './reactive/reactive.component';
+import { IntroComponent } from './intro/intro/intro.component';
 
 const routes: Routes = [{
   path: '',
-  component: ReactiveComponent
+  redirectTo: 'intro',
+  pathMatch: 'full'
+}, {
+  path: 'intro',
+  component: IntroComponent
 }];
 
 @NgModule({
