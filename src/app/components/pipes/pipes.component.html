@@ -1,3 +1,32 @@
-<p>
-  pipes works!
-</p>
+<div class="ja-topic">
+  <h2>Pipes</h2>
+  
+  <ja-question>
+    <div class="question">
+      Custom Pipe
+    </div>
+    <div class="answer">
+      <p>The following is an example of an custom pipe</p>
+      <ja-pipe-demo></ja-pipe-demo>
+    </div>
+  </ja-question>
+
+  <ja-question>
+    <div class="question">
+      Pure vs Impure Pipes
+    </div>
+    <div class="answer">
+      <p>
+        Piepes are pure by default. If a pipe is <span class="ja-italic-font">pure</span> 
+        then it will detect only changes over primitive values or reference changes 
+        in composite values like arrays and objects.
+      </p>
+      <p>
+        Angular executes an <span class="ja-italic-font">impure</span> pipe during 
+        every component change detection cycle. An impure pipe is called often, 
+        as often as every keystroke or mouse-move.
+      </p>
+    </div>
+  </ja-question>
+</div>
+  
