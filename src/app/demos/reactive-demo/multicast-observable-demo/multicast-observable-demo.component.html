@@ -1,0 +1,41 @@
+<div>
+  Person1 
+  <button (click)="subscribeToInterval(person1)" [disabled]="person1?.subscribed">
+    Subscribe
+  </button>
+  {{person1.seconds}}
+</div>
+<div>
+  Person2 
+  <button (click)="subscribeToInterval(person2)" [disabled]="person2?.subscribed">
+    Subscribe
+  </button>
+  {{person2.seconds}}
+</div>
+
+<div class="ja-code-container">
+    <pre class="prettyprint linenums lang-js">
+  {{"//MulticastObservableDemoComponent
+export class MulticastObservableDemoComponent implements OnInit {
+
+  intervalObservable: Observable<...>;
+  dateObserver1: Observer<...>;
+  person1 = {};
+  person2 = {};
+
+  constructor() { }
+
+  ngOnInit() {
+    this.intervalObservable = interval(500).pipe(share());
+  }
+
+  subscribeToInterval(person) {
+    person.subscribed = true;
+    this.intervalObservable.subscribe(seconds => {
+      person.seconds = seconds;
+    });
+  }
+
+}
+  "}}</pre>
+  </div>

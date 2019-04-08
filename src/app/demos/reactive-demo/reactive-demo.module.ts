@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { BasicObservableDemoComponent } from './basic-observable-demo/basic-observable-demo.component';
 import { ObserverInterfaceDemoComponent } from './observer-interface-demo/observer-interface-demo.component';
 import { UnicastObservableDemoComponent } from './unicast-observable-demo/unicast-observable-demo.component';
+import { MulticastObservableDemoComponent } from './multicast-observable-demo/multicast-observable-demo.component';
 
 @NgModule({
   declarations: [
     BasicObservableDemoComponent,
     ObserverInterfaceDemoComponent,
-    UnicastObservableDemoComponent
+    UnicastObservableDemoComponent,
+    MulticastObservableDemoComponent
   ],
   imports: [
     CommonModule
@@ -16,7 +18,8 @@ import { UnicastObservableDemoComponent } from './unicast-observable-demo/unicas
   exports: [
     BasicObservableDemoComponent,
     ObserverInterfaceDemoComponent,
-    UnicastObservableDemoComponent
+    UnicastObservableDemoComponent,
+    MulticastObservableDemoComponent
   ]
 })
 export class ReactiveDemoModule { }
