@@ -1,0 +1,9 @@
+@import '../../styles.scss';
+
+:host {
+  @extend %ja-demo-host;
+
+  &::before {
+    @extend %ja-demo-host--before;
+  }
+}

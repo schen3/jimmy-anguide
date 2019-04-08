@@ -36,4 +36,28 @@
       <strong>Observables are cold by default.</strong>
     </div>
   </ja-question>
+
+  <ja-message type="info">
+    Subscribing to an Observable is analogous to calling a Function.
+  </ja-message>
+  
+  <ja-basic-observable-demo></ja-basic-observable-demo>
+
+  <ja-question>
+    <div class="question">
+      Observer interface
+    </div>
+    <div class="answer">
+        <p>
+          A handler for receiving observable notifications implements the Observer interface. 
+          It is an object that defines callback methods to handle the three types 
+          of notifications that an observable can send: next, error (optional), and complete (optional).
+        </p>
+        <p>
+          Alternatively, the subscribe() method can accept callback function 
+          definitions in line, for next, error, and complete handlers.
+        </p>
+        <ja-observer-interface-demo></ja-observer-interface-demo>
+    </div>
+  </ja-question>
 </div>

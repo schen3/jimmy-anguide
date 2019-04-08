@@ -1,0 +1,72 @@
+<div>
+  Numbers to append: 1, 2 ,3
+  <button (click)="subscribe()">Append</button>
+</div>
+<div>
+  Numbers: 
+  <span *ngFor="let number of numbers">
+    {{number}}
+  </span>
+</div>
+
+
+<div class="ja-code-container">
+  <pre class="prettyprint linenums lang-js">
+{{"// Object observer interface
+subscribe() {
+  const numbersObserver: Observer<> = {
+    next: number => {this.numbers.push(number)},
+    error: () => {},
+    complete: () => {this.numbers.push(0)}
+  };
+  this.numbersObservable.subscribe(numbersObserver);
+}
+
+// Callback functions definition inline
+this.numbersObservable.subscribe(
+  number => {this.numbers.push(number)},
+  err => {},
+  () => {this.numbers.push(0)});
+}
+"}}</pre>
+</div>
+
+<div class="ja-code-container">
+    <pre class="prettyprint linenums lang-js">
+{{"//Component
+export class ObserverInterfaceDemoComponent implements OnInit {
+
+  numbersObservable: Observable<>;
+  numbers: Array<> = [];
+
+  constructor() { }
+
+  ngOnInit() {
+    this.createNumbersObservable();
+  }
+
+  createNumbersObservable() {
+    const observableFn = observer => {
+      observer.next(1);
+      observer.next(2);
+      observer.next(3);
+      observer.complete();
+      return {
+        unsubscribe(){console.log('unsubscribed')}
+      };
+    }
+    this.numbersObservable = new Observable(observableFn);
+  }
+
+  subscribe() {
+    const numbersObserver: Observer<> = {
+      next: number => {this.numbers.push(number)},
+      error: () => {},
+      complete: () => {console.log('completed')}
+    };
+    this.numbersObservable.subscribe(numbersObserver);
+  }
+
+}
+"}}</pre>
+  </div>

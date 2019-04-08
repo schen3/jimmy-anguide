@@ -1,0 +1,27 @@
+<div>
+  <button (click)="doubleSubscription()">Subscribe two times!</button>
+  Numbers: {{numbers}}
+</div>
+
+<div class="ja-code-container">
+  <pre class="prettyprint linenums lang-js">
+{{"//BasicObservableDemoComponent
+export class BasicObservableDemoComponent implements OnInit {
+
+  numbersObservable: Observable<...>;
+  numbers: Array<...> = [];
+
+  constructor() { }
+
+  ngOnInit() {
+    this.numbersObservable = of(1,2,3);
+  }
+
+  doubleSubscription() {
+    this.numbersObservable.subscribe(number => {this.numbers = this.numbers.concat(number);});
+    this.numbersObservable.subscribe(number => {this.numbers = this.numbers.concat(number);});
+  }
+}
+"}}
+  </pre>
+</div>
