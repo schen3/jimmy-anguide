@@ -60,4 +60,30 @@
         <ja-observer-interface-demo></ja-observer-interface-demo>
     </div>
   </ja-question>
+
+
+  <ja-question>
+    <div class="question">
+      Are Observables unicast or multicast?
+    </div>
+    <div class="answer">
+        <p>
+          Observers are by default unicast.
+          A <span class="ja-italic-font">"unicast Observable" </span> 
+          creates a new, independent execution for each 
+          subscribed observer. When an observer subscribes, the observable wires up 
+          an event handler and delivers values to that observer. When a second 
+          observer subscribes, the observable then wires up a new event handler and 
+          delivers values to that second observer in a separate execution.
+        </p>
+        <ja-unicast-observable-demo></ja-unicast-observable-demo>
+        <p>
+          A <span class="ja-italic-font">"multicast Observable" </span> 
+          broadcasts to a list of multiple subscribers in a single execution. 
+          With a multicasting observable, you don't register multiple listeners 
+          on the document, but instead re-use the first listener and send values 
+          out to each subscriber.
+        </p>
+    </div>
+  </ja-question>
 </div>
