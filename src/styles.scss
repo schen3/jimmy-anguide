@@ -23,6 +23,10 @@ button {
     cursor: pointer;
     background-color: $prettyprint_light_2;
   }
+
+  &[disabled] {
+    background-color: gray;
+  }
 }
 
 .ja-section {
